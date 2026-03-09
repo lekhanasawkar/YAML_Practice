@@ -1,0 +1,25 @@
+Employee name: Robert .E
+Employee ID: 1905644328
+Employee Designation: DevSecops Engineer
+Date of joining: 1st May 2026
+Technical Skills:
+  - HTML/CSS
+  - Python
+  - Linux
+  - Networking
+  - Shell Scripting
+Tools:
+  - Docker
+  - Kubernetes
+  - Jenkins
+  - ArgoCD
+  - GitHub
+Experience:
+  DevOps:
+    -Linux: 3 Year
+    -Docker: 2 Year
+    -K8: 1 Year
+  DevSecOps:
+    -Trivy: 4
+    -SAST: 5
+    -SonarQube: 7
