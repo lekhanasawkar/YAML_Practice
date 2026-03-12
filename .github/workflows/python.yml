@@ -5,18 +5,22 @@ on:
 jobs:
   validate:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matix:
+         python-version: ["3.9", "3.10", "3.11", "3.12", "3.13"]
     steps:
       - name: checkout code
         uses: actions/ checkout@v4
   steps:
-    - name: setup python
+    - name: setup python ${{ matrix.python-version}}
       uses: actions/steup-python@v5
       with:
-        python-version: "3.13"
+        python-version: ${{ matrix.python-version}}
         uses: action/setup-python@v5
         with:
           python-version: "3.13"
     - name: install dependencies
       run: pip install -r requirements.txt
     - name: run linter
-      run: flaked
+      run: flake8 app.py
